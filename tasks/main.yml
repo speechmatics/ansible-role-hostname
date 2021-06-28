@@ -1,12 +1,12 @@
 ---
 - name: Hostname | Setting up hostname
   become: true
-  hostname:
+  ansible.builtin.hostname:
     name: "{{ hostname_fqdn_full }}"
 
 - name: Hostname | Update the IPv4 part of hosts file
   become: true
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: "{{ hostname_hosts_file_location }}"
     regexp: "^127.0.0.1"
     # yamllint disable-line rule:line-length
@@ -17,7 +17,7 @@
 
 - name: Hostname | Update the IPv6 part of hosts file
   become: true
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: "{{ hostname_hosts_file_location }}"
     regexp: "^::1"
     # yamllint disable-line rule:line-length
