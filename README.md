@@ -23,10 +23,10 @@ Role Variables
 | ---------------------------- | ------------------------ | -------------------------------------------------------------- |
 | hostname_hosts_file_location | "/etc/hosts"             | Hosts file location.                                           |
 | hostname_hosts_backup        | False                    | You can make backup of hosts file before changes will be made. |
-| hostname_fqdn_full           | inventory_hostname       | By default this role use **inventory_hostname** from inventory file to get host hostname, but you can set **hostname_fqdn_full** and **hostname_fqdn_short** to change this behavior. |
+| hostname_fqdn_full           | inventory_hostname       | By default this role uses **inventory_hostname** from inventory file to get host hostname, but you can set **hostname_fqdn_full** and **hostname_fqdn_short** to change this behavior. |
 | hostname_fqdn_short          | inventory_hostname_short |                                                                |
-| hostname_hosts_ipv4_enabled  | true                     | When true, add an IPv3 entry to /etc/hosts                     |
-| hostname_hosts_ipv6_enabled  | true                     | When true, add an IPv6 entry to /etc/hosts                     |
+| hostname_hosts_ipv4_enabled  | true                     | When true, add an IPv4 entry to /etc/hosts.                    |
+| hostname_hosts_ipv6_enabled  | true                     | When true, add an IPv6 entry to /etc/hosts.                    |
 
 Dependencies
 ------------
