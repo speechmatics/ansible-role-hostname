@@ -5,7 +5,6 @@ galaxy_info:
   company: Speechmatics
   # https://galaxy.ansible.com/docs/contributing/creating_role.html#role-names
   role_name: hostname
-  github_branch: add_ci_builds_and_publish_to_galaxy
   description: >
     This role will set hostname on any target host.
     By default hostname is same as inventory_hostname, but can
