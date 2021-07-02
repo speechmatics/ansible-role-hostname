@@ -71,3 +71,21 @@ Author Information
 ------------------
 
 This role is a fork of https://github.com/insspb/ansible-role-hostname.
+
+Release procedure
+------------------
+
+1. Merge your code to `master` branch
+1. Add a Git tag, according to Semantic Versioning rules and push it
+1. Create a release on Github.com
+
+
+**NOTE**
+
+>  Tagging a feature branch triggers a release as well, but it will
+>  not do what you'd expect (so should be avoided).
+>
+>  Instead of the tagged code, the latest
+>  on `master` branch will be published to galaxy.
+>
+> See more details in https://github.com/speechmatics/ansible-role-hostname/pull/2
