@@ -48,9 +48,8 @@ This role is developed with community help.
 
 Process of development follows this rule: 
 
-   - You are free to add any pull request to develop branch. All request will be answered in timely manner. 
+   - You are free to add any pull request to `master` branch.
    - If you want to made any contribution, but do not know where to start - check issues.
-   - Master branch updated just after significant changes in develop.
    - Please include documentation for new features. 
    - Please use variables.
    - Please do not forget to set defaults.
@@ -58,6 +57,10 @@ Process of development follows this rule:
    - Please use packet installation as default software installation method. Source installation must be optional anywhere if possible.
    - Please use official software developers repositories instead of general Debian/Ubuntu/Centos etc for main application. 
    - Do you best to keep role independent from any other roles. User must have the way to choose what roles to use.
+
+Note:
+
+  - CI uses ansible-lint version 4.x.
 
 License
 -------
@@ -68,3 +71,21 @@ Author Information
 ------------------
 
 This role is a fork of https://github.com/insspb/ansible-role-hostname.
+
+Release procedure
+------------------
+
+1. Merge your code to `master` branch
+1. Add a Git tag, according to Semantic Versioning rules and push it
+1. Create a release on Github.com
+
+
+**NOTE**
+
+>  Tagging a feature branch triggers a release as well, but it will
+>  not do what you'd expect (so should be avoided).
+>
+>  Instead of the tagged code, the latest
+>  on `master` branch will be published to galaxy.
+>
+> See more details in https://github.com/speechmatics/ansible-role-hostname/pull/2

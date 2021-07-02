@@ -1,6 +1,11 @@
 ---
 galaxy_info:
-  author: Andrey Shpak
+  license: MIT
+  author: speechmatics
+  company: Speechmatics
+  # https://galaxy.ansible.com/docs/contributing/creating_role.html#role-names
+  role_name: hostname
+  github_branch: add_ci_builds_and_publish_to_galaxy
   description: >
     This role will set hostname on any target host.
     By default hostname is same as inventory_hostname, but can
@@ -8,10 +13,7 @@ galaxy_info:
 
     This is a fork of original role by Andrey Shpak
     (https://github.com/insspb/ansible-role-hostname)
-  company: Speechmatics
-  license: license (MIT)
   min_ansible_version: 2.2.1
-  github_branch: master
   platforms:
     - name: EL
       versions:

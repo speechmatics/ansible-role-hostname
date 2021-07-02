@@ -1,10 +1,10 @@
 ---
-- name: Hostname | Setting up hostname
+- name: Setting up hostname
   become: true
   ansible.builtin.hostname:
     name: "{{ hostname_fqdn_full }}"
 
-- name: Hostname | Update the IPv4 part of hosts file
+- name: Update the IPv4 part of hosts file
   become: true
   ansible.builtin.lineinfile:
     dest: "{{ hostname_hosts_file_location }}"
@@ -15,7 +15,7 @@
     backup: "{{ hostname_hosts_backup }}"
   when: hostname_hosts_ipv4_enabled
 
-- name: Hostname | Update the IPv6 part of hosts file
+- name: Update the IPv6 part of hosts file
   become: true
   ansible.builtin.lineinfile:
     dest: "{{ hostname_hosts_file_location }}"
