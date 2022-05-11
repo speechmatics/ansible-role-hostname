@@ -10,7 +10,7 @@
     dest: "{{ hostname_hosts_file_location }}"
     regexp: "^127.0.0.1"
     # yamllint disable-line rule:line-length
-    line: "127.0.0.1{{ '\t' }}{{ hostname_fqdn_full }}{% if hostname_fqdn_full != hostname_fqdn_short %}{{ '\t' }}{{ hostname_fqdn_short }}{{ '\t' }}{% endif %}localhost localhost.localdomain localhost4 localhost4.localdomain4"
+    line: "127.0.0.1{{ '\t' }}{{ hostname_fqdn_full }}{{ '\t' }}{% if hostname_fqdn_full != hostname_fqdn_short %}{{ hostname_fqdn_short }}{{ '\t' }}{% endif %}localhost localhost.localdomain localhost4 localhost4.localdomain4"
     state: present
     backup: "{{ hostname_hosts_backup }}"
   when: hostname_hosts_ipv4_enabled
